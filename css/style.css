@@ -71,7 +71,7 @@ html, body {
 /* стили для head START */
 .header {
 	position: relative;
-  margin: 0 auto;
+ 	margin: 0 auto;
 	min-height: 452px;
 	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
       /*  Для растягивания картинки при увеличении контента в заголовке можно разрешить повторение по высоте - тут repeat-y;*/
@@ -151,6 +151,56 @@ html, body {
 	justify-content: flex-start;
 	gap: 118px;
 }
+
+/* -- стили для блока "сейчас в тренде" START -- */
+
+.main-now-trending {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.now-trending-title {
+	margin: 63px auto 45px auto;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;	
+}
+
+.now-trending-title:after {
+	content: "";
+	display: block;
+	margin: 11px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+
+.new-trending-posts {
+	display: flex;
+}
+
+.new-trending-post {
+	
+}
+
+.first-trend {
+
+}
+
+.second-trend {
+
+}
+
+.third-trend {
+
+}
+
+.fourth-trend {
+
+}
+
+
+/* -- стили для блока "сейчас в тренде" END -- */
 
     /* -- стили для левой колонки START	main-posts -- */
 .main-post-container {
