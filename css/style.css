@@ -1,0 +1,532 @@
+/* подключение шрифтов START  */
+@font-face {
+	font-family: "OpenSans";
+	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+	font-weight: 700;
+	font-style: normal;
+}
+/* подключение шрифтов END  */
+
+/* сброс стилей по умолчанию START */
+html, body, div, span, h1, h2, h3, p, a, address, 
+img, sub, sup, ol, ul, li, form, label, article, 
+aside,figure, figcaption, footer, header, menu, 
+nav, section, time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, figcaption, figure, footer, 
+header, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+*, *::after, *::before{
+	box-sizing: inherit;
+}
+/* сброс стилей по умолчанию END */
+
+/* общие стили для проекта START */
+html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "OpenSans", "Arial", "Helvetica", sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	color: #0f0d0e;
+}
+
+.wrapper {
+	max-width: 1200px;
+	padding: 0 15px 0;
+	margin: 0 auto;
+}
+/* общие стили для проекта END */
+
+/* стили для head START */
+.header {
+	position: relative;
+  margin: 0 auto;
+	min-height: 452px;
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+      /*  Для растягивания картинки при увеличении контента в заголовке можно разрешить повторение по высоте - тут repeat-y;*/
+	background-repeat: no-repeat; 
+	background-position: center top;
+     /* Для растягивания картинки при увеличении контента в заголовке выбрал этот вариантbackground-size: cover;*/ 
+  background-size: cover;
+	background-color: #43625c;
+	z-index: 1;
+}
+
+.header::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	background-color: rgba(0, 0 , 0, 0.6);
+	z-index: -1;
+}  
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-image {
+	margin: 30px 0 0 3px;
+	width: 179px;
+}
+
+.header-menu {
+	margin-top: 43px;
+}
+
+.menu-list {
+	display: flex;
+	gap: 35px;	
+}
+
+.menu-item {
+	list-style-type: none;
+}
+
+.menu-item-link {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.menu-item:hover {
+	text-decoration: underline;
+}
+
+.header-title {
+	max-width: 687px;
+	margin: 105px auto 0 auto;
+	text-align: center;
+	font-family: "OpenSans", "Arial", "Helvetica", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	color: #ffffff;
+	font-size: 45px;
+	line-height: 1.67;
+	text-transform: uppercase;
+} 
+/* стили для head END */
+
+/* стили для main START */
+.main {
+	margin-top: 4px;
+	margin-bottom: 68px;
+	display: flex;
+	justify-content: flex-start;
+	gap: 118px;
+}
+
+    /* -- стили для левой колонки START	main-posts -- */
+.main-post-container {
+	margin-top: 60px;
+	display: flex;
+	flex-basis: 778px;
+	gap: 30px;
+}
+
+.post-image {
+	width: 381px;
+	min-height: 294px;
+	object-fit: contain;
+  background-color: #cecece;
+}
+
+.post-wrapper {
+	max-width: 370px;
+}
+
+.post-tags {
+	margin-right: 15px;
+	vertical-align: top;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	color: #b59f5b;
+}
+
+.post-tags:hover {
+	color: #b59f5b;
+	text-decoration: underline;
+}
+
+.post-title {
+	margin-top: 7px;
+	max-width: 330px;
+}
+
+.post-title-link {	
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #0f0d0e;
+}
+
+.post-title-link:hover {
+	color: #b59f5b;
+}
+
+.post-time {
+	display: block;
+	margin-top: 16px;
+	font-size: 12px;
+	line-height: 40px;
+	font-weight: 400;
+	color: #888888;
+}
+
+.post-author {
+	margin-left: 9px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.post-text {
+	margin-top: 34px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.46;
+	color: #0f0d0e;
+}
+		/* этот класс введен для соответствия макету.
+		Предполагаю, что тут надо пообщаться с дизайнером,
+		чтобы решить вопрос с несоответствием промежутков 
+		между строками в одном текте поста. */
+
+.necessary-interval-after {
+	display: inline-block;
+	margin-top: 9px;
+}
+    /* -- стили для левой колонки END .main-posts -- */
+
+		/* -- стили для правой колонки START .main-additional-info -- */
+.main-additional-info {
+	margin-top: 50px;
+	flex-basis: 272px;
+}
+
+.main-additional-info-new-posts {
+	margin-bottom: 58px;
+}
+		
+.main-additional-info-title {
+	text-align: center;
+	margin:0 auto 28px 6px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 29.15px;
+	text-transform: uppercase;
+	color: #0f0d0e;
+}
+
+.main-additional-info-title::after {
+	content: "";
+	display: block;
+	margin: 6px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+
+.additional-info-new-post {
+	margin-bottom: 22px;
+	display: flex;
+	gap: 19px;
+}
+
+.new-post-image {
+	width: 70px;
+	height: 70px;
+	object-fit: contain;
+  background-color: #cecece;
+}
+
+.new-post-date {
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: lowercase;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.new-post-title-text {
+	margin-top: 3px;
+}
+
+.new-post-title-link {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 700;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.new-post-title-link:hover {
+	color: #b59f5b;
+}
+
+.additional-info-search {
+	margin-bottom: 54px;
+}
+
+.form-search {
+	position: relative;
+	max-width: 223px;
+	min-width: 90px;
+}
+
+.field-search {
+	width: 100%;
+	min-height: 20px;
+	height: 48px;
+	padding-left: 19px;
+	background-color: #f3f7f5;
+	outline: none;
+	border: unset;
+}
+
+.field-search:focus {
+	border: 1px solid #b59f5b;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	clip: rect(0 0 0 0 );
+}
+
+.search-button {
+	position: absolute;
+	top: 0;
+	right: -48px;
+	width: 48px;
+	height: 48px;
+	border: unset;
+	background-color: #b59f5b;
+	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+	background-repeat: no-repeat;
+	background-size: 18px;
+	background-position: center center;
+	font-size: 3px; /* для уменьшения контура обводки поля при 
+						переходе на это поле по "Tab" на странице */
+}
+
+.search-button:hover {
+	background-color: #323232;
+}
+.additional-info-mailing {
+	margin-bottom: 50px;
+}
+
+.additional-info-mailing-title {
+	text-align: center;
+	margin-right: 6px;
+	margin-bottom: 22px;
+	font-size: 14px;
+	line-height: 29.15px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;
+}
+
+.additional-info-mailing-title::after {
+	content: "";
+	display: block;
+	margin: 4px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+
+.mailing-field {
+	padding-left: 18px;
+	margin-bottom: 17px;
+	width: 100%;
+	height: 50px;
+	border: unset;
+	outline: unset;
+	background-color: #f3f7f5;
+}
+
+.mailing-field:focus {	
+	border: 1px solid #b59f5b;
+}
+
+.mailing-button {
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 40px;
+	color: #ffffff;
+	border: unset;
+	outline: unset;
+	background-color: #b59f5b;
+	text-transform: uppercase;
+}
+
+.mailing-button:hover {
+	background-color: #323232;
+}
+
+.additional-info-tags {
+	margin-bottom: 59px;
+}
+
+.additional-info-tags-title {
+	margin-bottom: 24px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 29.15px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;
+}
+
+.additional-info-tags-title::after {
+	content: "";
+	display: block;
+	margin: 5px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+
+.additional-info-tags-container {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 8px ;
+	row-gap: 5px;	
+}
+
+.tag-item {
+	padding: 8px 13px 5px;
+	border: 3px solid #eeeeee;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;
+}
+
+.tag-link {	
+	text-decoration: none;
+  color: inherit;
+}
+
+.tag-item:hover {
+	color: #000000;
+	border: 3px solid #b59f5b;
+}
+
+.additional-info-themes-title {
+	margin: 0 auto 23px 5px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0f0d0e;
+	text-transform: uppercase;
+}
+
+.additional-info-themes-title::after {
+	content: "";
+	display: block;
+	margin: 12px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+		
+.additional-info-themes-container {
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;	
+}
+
+.theme-item {
+	padding-bottom: 13px;
+	border-bottom: 1px solid #eeeeee ;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0f0d0e;
+}
+
+.theme-link {
+	text-decoration: none;
+  color: inherit;
+}
+
+.theme-link:hover {
+	color: #b59f5b;
+}
+
+.theme-link-count {
+	font-size: 12px;
+	font-weight: bold;
+	color: #b59f5b;
+	vertical-align: super;
+}
+    /* -- стили для правой колонки END .main-additional-info -- */
+
+/* стили для main END */
+
+/* стили для footer START */
+.social-links-list {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 27px;
+	flex-basis: 100%;
+	margin-left: 5px;
+	justify-content: center;
+	align-items: center;
+	height: 82px;
+	background-color: #f4f7f6;
+}
+
+.social-link-item {
+	width: 20px;
+}
+
+.copyright {
+	margin-top: 70px;
+	text-align: center;
+}
+
+.copyright-link {
+	margin-left: 13px;
+	font-size: 12px;
+	font-weight: bold;	
+	color: #999999;
+	text-decoration: none;
+}
+/* стили для footer END */
