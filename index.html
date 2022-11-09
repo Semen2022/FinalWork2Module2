@@ -32,11 +32,11 @@
       </h1>
     </div>
   </header>
-  <main class="wrapper">
-    <!-- добавляем новый блок в основную часть страницы
+  <main class="main">
+    <!-- добавляем новый блок в основную часть страницы START
           разделил двойной класс "main wrapper" обертку с границами оставил "снаружи", 
           класс с flexbox отодвинул и сгруппировал ниже по коду для возможности ввода
-          нового "неколочного" блока с классом "main-now-trending" -->
+          нового "неколоночного" блока с классом "main-now-trending" -->
     <section class="main-now-trending">
       <h2 class="now-trending-title">сейчас в тренде</h2>
       <div class="new-trending-posts">
@@ -44,8 +44,8 @@
           <div class="new-trending-post-tags-title">
             <span class="new-trending-post-tag">lifestyle</span>
             <span class="new-trending-post-tag">interior</span>
-            <h3 class="new-trending-post-title">
-              <a href="" class="new-trending-post-title-link">
+            <h3>
+              <a href="0#" class="new-trending-post-title-link">
                 сейчас в тренде: сад на подоконнике
               </a>
             </h3>
@@ -55,7 +55,7 @@
           <div class="new-trending-post-tags-title">
             <span class="new-trending-post-tag">food</span>
             <h3 class="new-trending-post-title">
-              <a href="" class="new-trending-post-title-link">
+              <a href="0#" class="new-trending-post-title-link">
                 сыры на красивых  картинках из интернета: какие они на вкус?
               </a>
             </h3>
@@ -66,7 +66,7 @@
             <span class="new-trending-post-tag">lifestyle</span>
             <span class="new-trending-post-tag">travel</span>
             <h3 class="new-trending-post-title">
-              <a href="" class="new-trending-post-title-link">
+              <a href="0#" class="new-trending-post-title-link">
                 собираемся в первый поход в горы
               </a>
             </h3>
@@ -77,15 +77,17 @@
             <span class="new-trending-post-tag">food</span>
             <span class="new-trending-post-tag">health</span>
             <h3 class="new-trending-post-title">
-              <a href="" class="new-trending-post-title-link">
+              <a href="0#" class="new-trending-post-title-link">
                 сейчас в тренде: сколько витамина с в лимонах?
               </a>
             </h3>
           </div>
         </article> 
       </div>
+      <!-- добавляем новый блок в основную часть страницы end -->
     </section>
-    <div class="main">
+    <!-- основной двухколоночный блок страницы START -->
+    <div class="main-block wrapper">
       <section class="main-posts" id="posts"> <!-- используется тег section c применением скрытия заголовка раздела -->
         <h2 class="visually-hidden">Основной блок статей</h2>
         <!-- Первый пост начало -->
@@ -465,6 +467,7 @@
         </section>
         <!-- секция темы окончание -->
       </aside>
+      <!--  основной двухколоночный блок страницы END -->
     </div>
   </main>
   <footer class="footer wrapper">
