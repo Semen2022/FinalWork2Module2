@@ -644,6 +644,103 @@ html, body {
 	padding-right: 22px;
 }
 
+.our-products-posts {
+	display: flex;
+}
+
+.our-products-post {
+	display: flex;
+	flex-direction: column;
+}
+
+.our-products-post-title {
+	margin-top: 22px;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	color: #0f0d0e;
+}
+
+.our-products-post-text {
+	margin-top: 7px;
+	letter-spacing: -0.55px;
+	line-height: 1.35;
+}
+
+.our-products-post-link {
+	color: #b59f5b;
+	text-decoration: none;
+	letter-spacing: -0.55px;
+}
+
+.our-products-post-link:hover {
+	text-decoration: underline;
+}
+
+.our-products-post-link:active, 
+.our-products-post-link:visited {
+	color: #b59f5b;
+}
+
+/*
+.our-products-post-text:hover,
+.our-products-post-link:hover {
+	font-weight: bolder;
+	letter-spacing: -1.35px;
+} этот блок кода на тот случай, если все-таки при наведении
+ текст в карточке становится жирнее.
+*/
+.our-products-post-text-price {
+	display: flex;
+	flex-direction: column;
+	/*flex-basis: 100%;*/
+	outline: 3px solid #b59f5b;
+	outline-offset: 32px;
+}
+
+.our-products-post-price-link {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 21px;
+}
+
+.prices {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.prise-old {
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: line-through;
+}
+
+.prise-now {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.prise-old::after,
+.prise-now::after {
+	content: " \20BD";
+}
+
+.our-products-post-link-to-shop {
+	display: block;
+	text-align: center;
+	padding: 18px 26px;
+	background-color: #b59f5b;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.8px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.our-products-post-link-to-shop:hover {
+	background-color: #323232;
+}
 	/* --  стили для блока "our-products" END  -- */
 
 /* стили для main END */
