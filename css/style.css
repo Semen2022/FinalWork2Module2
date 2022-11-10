@@ -631,26 +631,19 @@ html, body {
 
 .our-products-posts {
 	display: flex;
-	flex-basis: 33%;
 	justify-content: space-around;
-	
-/*	column-gap: 52px;
-	-moz-column-gap: 52px;
-	-webkit-column-gap: 52px;*/
-}
-
-.our-products-post {
-	padding-left: 22px;
-	padding-right: 22px;
-}
-
-.our-products-posts {
-	display: flex;
+	column-gap: 63px;
+	-moz-column-gap: 63px;
+	-webkit-column-gap: 63px;
 }
 
 .our-products-post {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	max-width: 300px;
+/*	padding-left: 22px;
+	padding-right: 22px; */
 }
 
 .our-products-post-title {
@@ -663,14 +656,14 @@ html, body {
 
 .our-products-post-text {
 	margin-top: 7px;
-	letter-spacing: -0.55px;
+	font-size: 15px;
 	line-height: 1.35;
 }
 
 .our-products-post-link {
 	color: #b59f5b;
 	text-decoration: none;
-	letter-spacing: -0.55px;
+	
 }
 
 .our-products-post-link:hover {
@@ -693,7 +686,7 @@ html, body {
 .our-products-post-text-price {
 	display: flex;
 	flex-direction: column;
-	/*flex-basis: 100%;*/
+	flex-basis: 100%;
 	outline: 3px solid #b59f5b;
 	outline-offset: 32px;
 }
@@ -701,13 +694,15 @@ html, body {
 .our-products-post-price-link {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 21px;
+    align-items: flex-end;
+	margin-top: 23px;
 }
+
 
 .prices {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	margin-bottom: 8px;
 }
 
 .prise-old {
@@ -726,15 +721,29 @@ html, body {
 	content: " \20BD";
 }
 
+.to-bottom {
+	align-self: flex-end;
+}
+
+.price-hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: -1px;
+	padding: 0;
+	clip: rect(0 0 0 0);
+}
+
 .our-products-post-link-to-shop {
 	display: block;
 	text-align: center;
 	padding: 18px 26px;
 	background-color: #b59f5b;
 	text-transform: uppercase;
-	text-decoration: none;
-	letter-spacing: 0.8px;
+	text-decoration: none;/*
+	letter-spacing: 0.8px;*/
 	font-size: 14px;
+	font-weight: bold;
 	color: #ffffff;
 }
 
