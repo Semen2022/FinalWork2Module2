@@ -62,6 +62,7 @@ html, body {
 }
 
 .wrapper {
+	box-sizing: border-box;
 	max-width: 1200px;
 	padding: 0 15px 0;
 	margin: 0 auto;
@@ -147,7 +148,7 @@ html, body {
 /* стили для main START */
 .main-block {
 	margin-top: 4px;
-	margin-bottom: 68px;
+	margin-bottom: 63px;
 	display: flex;
 	justify-content: flex-start;
 	gap: 118px;
@@ -292,7 +293,7 @@ html, body {
 
 .post-title {
 	margin-top: 7px;
-	max-width: 330px;
+	max-width: 335px;
 }
 
 .post-title-link {	
@@ -344,7 +345,7 @@ html, body {
 		/* -- стили для правой колонки START .main-additional-info -- */
 .main-additional-info {
 	margin-top: 50px;
-	flex-basis: 272px;
+	flex-basis: 270px;
 }
 
 .main-additional-info-new-posts {
@@ -585,7 +586,7 @@ html, body {
 }
 
 .theme-item {
-	padding-bottom: 13px;
+	padding-bottom: 11px;
 	border-bottom: 1px solid #eeeeee ;
 	font-size: 14px;
 	font-weight: bold;
@@ -608,6 +609,42 @@ html, body {
 	vertical-align: super;
 }
     /* -- стили для правой колонки END .main-additional-info -- */
+
+	/* --  стили для блока "our-products" START  -- */
+
+.our-products-title {
+	margin-bottom: 29px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	color: #0f0d0e;
+}
+
+.our-products-title::after {
+	content: "";
+	display: block;
+	margin: 10px auto 0 auto;
+	width: 67px;
+	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
+}
+
+.our-products-posts {
+	display: flex;
+	flex-basis: 33%;
+	justify-content: space-around;
+	
+/*	column-gap: 52px;
+	-moz-column-gap: 52px;
+	-webkit-column-gap: 52px;*/
+}
+
+.our-products-post {
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+	/* --  стили для блока "our-products" END  -- */
 
 /* стили для main END */
 

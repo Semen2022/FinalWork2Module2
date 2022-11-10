@@ -33,7 +33,7 @@
     </div>
   </header>
   <main class="main">
-    <!-- добавляем новый блок в основную часть страницы START
+    <!-- добавляем новый блок "Сейчас в тренде" в основную часть страницы START
           разделил двойной класс "main wrapper" обертку с границами оставил "снаружи", 
           класс с flexbox отодвинул и сгруппировал ниже по коду для возможности ввода
           нового "неколоночного" блока с классом "main-now-trending" -->
@@ -230,59 +230,6 @@
           </div>
         </article>
         <!-- Пятый пост окончание -->
-        <!-- Шестой пост начало -->
-        <article class="main-post-container">
-          <img class="post-image" 
-              src="images/last-post6.jpg" 
-              alt="фото двух человек в горах" >
-          <div class="post-wrapper">
-            <div class="post-header">
-              <span class="post-tags">Travel</span>
-              <span class="post-tags">Lifestyle</span>
-              <h3 class="post-title">
-                <a class="post-title-link" href="#0">
-                  Как первый раз отправиться в горы?
-                </a>
-              </h3>
-            </div>
-            <time class="post-time" datetime="2019-06-10">
-              10 июня 2019
-              <span class="post-author">Неизвестный автор</span>
-            </time>
-            <p class="post-text">
-              Для начала нужно определиться, в каком формате пройдёт 
-              ваше путешествие. Это зависит от многих факторов, не 
-              только от ваших желаний и интересов.
-            </p>
-          </div>
-        </article>
-        <!-- Шестой пост окончание -->
-        <!-- Седьмой пост начало -->
-        <article class="main-post-container">
-          <img class="post-image" 
-              src="images/last-post4.jpg" 
-              alt="фото накрытого обеденного стола" >
-          <div class="post-wrapper">
-            <div class="post-header">
-              <span class="post-tags">Lifestyle</span>
-              <span class="post-tags">Food</span>
-              <h3 class="post-title">
-                <a class="post-title-link" href="#0">
-                  Наукоёмкий подход к кулинарии
-                </a>
-              </h3>
-            </div>
-            <time class="post-time" datetime="2019-06-10">
-              10 июня 2019
-              <span class="post-author">Неизвестный автор</span>
-            </time>
-            <p class="post-text">
-              Узнаем основы проектирования новых пищевых и около-пищевых 
-              опытов, вскроем физику, химию и микробиологию еды.
-            </p>
-          </div>
-        </article>
-        <!-- Седьмой пост окончание -->
       </section>    
       <aside class="main-additional-info">
         <section class="main-additional-info-new-posts" id="new_posts">
@@ -314,7 +261,6 @@
               <h3 class="new-post-title-text">
                 <a class="new-post-title-link" href="#0">
                   Йога для домашних
-                  lorem100
                 </a>
               </h3>
             </div>
@@ -469,6 +415,64 @@
       </aside>
       <!--  основной двухколоночный блок страницы END -->
     </div>
+        <!-- секция "наши изделия" START -->
+        <!-- добавляем еще один новый блок "Наши изделия" в основную часть страницы.
+         Ранее разделил двойной класс "main wrapper" обертку с границами оставил "снаружи", 
+           класс с flexbox отодвинул и сгруппировал ниже по коду для возможности ввода
+           нового "неколоночного" блока с классом "main-now-trending"
+         И после окончания "двухколоночного" раздела страницы добавяю этот блок  -->
+    <section class="our-products wrapper">
+      <h2 class="our-products-title">
+        наши изделия
+      </h2>
+      <div class="our-products-posts">
+        <article class="our-products-post first-product">
+          <picture class="our-products-post-picture">
+            <img class="our-products-post-image" 
+                  src="images/shop-item-desk1.jpg" 
+                  alt="Подушка с принтом на диване">
+          </picture>
+          <div class="our-products-post-text-price">  
+            <h3 class="our-products-post-title">
+              подушки на диван @@Нужен "picture"  @@
+            </h3>
+            <p class="our-products-post-text">
+              Набор из двух подушек с модными принтами.
+              Видео о создании <a class="our-products-post-link">здесь</a>.
+            </p>
+            <div class="our-products-post-price-link">
+              <div class="prices">
+                <span class="prise-old"></span>
+                <span class="prise-now"></span>
+              </div>
+              <a href="0#" class="our-products-post-link-to-shop">в магазин</a>
+            </div>
+          </div>
+        </article>
+        <article class="our-products-post second-product">
+          <img class="our-products-post-image" src="images/shop-item-desk2.jpg" alt="мягкая игрушка кукла-заяц">
+          <h3 class="our-products-post-title">
+            подушки на диван
+          </h3>
+          <p class="our-products-post-text">
+            Набор из двух подушек с модными принтами.
+            Видео о создании <a class="our-products-post-link">здесь</a>.
+          </p>
+        </article>
+        <article class="our-products-post third-product">
+          <img class="our-products-post-image" src="images/shop-item-desk3.jpg" alt="шестиугольная фотторамка">
+          <h3 class="our-products-post-title">
+            подушки на диван
+          </h3>
+          <p class="our-products-post-text">
+            Набор из двух подушек с модными принтами.
+            Видео о создании <a class="our-products-post-link">здесь</a>.
+          </p>
+        </article> 
+      </div>
+    </section>
+        <!-- секция "наши изделия" END -->
+    
   </main>
   <footer class="footer wrapper">
     <address class="social-links" id="contacts">
