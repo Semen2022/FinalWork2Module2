@@ -481,7 +481,7 @@
             </p>
             <div class="our-products-post-price-link">
               <div class="prices">
-                <span class="prise-old price-hidden">0000</span>
+                <span class="prise-old price-hidden">4000</span> <!-- строка оставлена на случай необходимости указать "старую" цену-->
                 <span class="prise-now to-bottom">3500</span>
               </div>
               <a href="0#" class="our-products-post-link-to-shop">в магазин</a>
@@ -559,6 +559,57 @@
       <a class="copyright-link" href="#0">Copyright © 2009–2019 City Blog LLC.</a>
     </div>
   </footer>
+
+<!-- всплывающее окно, по умолчанию скрыто START -->
+<div class="popup-container">
+  <form class="popup-form-feedback visually-hidden00" action="0#" method="post" enctype="multipart/form-data">
+    <h2 class="popup-form-feedback-title">
+      ваш фидбек
+    </h2>
+    <div class="popup-form-feedback-question-visit-site">
+      <p class="question-visit-site-text">
+        Как часто вы заходите на сайт?
+      </p>
+      <select name="answer-visit-site">
+        <option value="almost-every-day">Почти каждый день</option>
+        <option value="almost-every-manth">Почти каждый месяц</option>
+        <option value="almost-every-six-months">Примерно раз в полгода</option>
+      </select>    
+    </div>
+    <div class="question-subscribed-e-mail">
+      <p class="question-subscribed-e-mail-text">
+        Вы подписаны на e-mail рассылку?
+      </p>
+      <label class="label-answer-subscribed-yes">
+        <input class="answer-subscribed-yes" 
+                type="radio" 
+                name="answer-subscribed" 
+                value="yes"
+                checked required>
+        <span class="answer-subscribed-yes-text">Да</span>
+      </label>
+      <label class="label-answer-subscribed-no">
+        <input class="answer-subscribed-no" 
+                type="radio" 
+                name="answer-subscribed" 
+                value="no">
+        <span class="answer-subscribed-yes-text">Нет</span>
+      </label>
+    </div>
+    <div class="popup-form-feedback-question-content">
+      <p class="question-content-text">
+        Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+      </p>
+      <textarea class="answer-content-text" 
+                name="content-text"
+                placeholder="Может, больше рецептов?">
+      </textarea> 
+    </div>
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+<!-- всплывающее окно, по умолчанию скрыто END -->
+
 </body>
 </html>
 
