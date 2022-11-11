@@ -112,7 +112,9 @@ html, body {
 
 .menu-list {
 	display: flex;
-	gap: 35px;	
+	column-gap: 35px;
+	-moz-column-gap: 35px;
+	-webkit-column-gap: 35px;
 }
 
 .menu-item {
@@ -151,7 +153,9 @@ html, body {
 	margin-bottom: 63px;
 	display: flex;
 	justify-content: flex-start;
-	gap: 118px;
+	column-gap: 118px;
+	-moz-column-gap: 118px;
+	-webkit-column-gap: 118px;
 }
 
 /* -- стили для блока "сейчас в тренде" START -- */
@@ -181,9 +185,9 @@ html, body {
 .new-trending-posts {
 	display: flex;
 	height: 100%;
-	column-gap: 5px;
-	-moz-column-gap: 5px;
-	-webkit-column-gap: 5px;
+	column-gap: 7px;
+	-moz-column-gap: 7px;
+	-webkit-column-gap: 7px;
 }
 
 .new-trending-post {
@@ -263,7 +267,9 @@ html, body {
 	margin-top: 60px;
 	display: flex;
 	flex-basis: 778px;
-	gap: 30px;
+	column-gap: 30px;
+	-moz-column-gap: 30px;
+	-webkit-column-gap: 30px;
 }
 
 .post-image {
@@ -373,7 +379,9 @@ html, body {
 .additional-info-new-post {
 	margin-bottom: 22px;
 	display: flex;
-	gap: 19px;
+	column-gap: 19px;
+	-moz-column-gap: 19px;
+	-webkit-column-gap: 19px;
 }
 
 .new-post-image {
@@ -539,7 +547,9 @@ html, body {
 .additional-info-tags-container {
 	display: flex;
 	flex-wrap: wrap;
-	column-gap: 8px ;
+	column-gap: 8px;
+	-moz-column-gap: 8px;
+	-webkit-column-gap: 8px;
 	row-gap: 5px;	
 }
 
@@ -675,14 +685,6 @@ html, body {
 	color: #b59f5b;
 }
 
-/*
-.our-products-post-text:hover,
-.our-products-post-link:hover {
-	font-weight: bolder;
-	letter-spacing: -1.35px;
-} этот блок кода на тот случай, если все-таки при наведении
- текст в карточке становится жирнее.
-*/
 .our-products-post-text-price {
 	display: flex;
 	flex-direction: column;
@@ -697,7 +699,6 @@ html, body {
     align-items: flex-end;
 	margin-top: 23px;
 }
-
 
 .prices {
 	display: flex;
@@ -755,10 +756,18 @@ html, body {
 /* стили для main END */
 
 /* стили для footer START */
+
+.footer {
+	margin-top: 94px;
+	margin-bottom: 48px;
+}
+
 .social-links-list {
 	display: flex;
 	flex-wrap: nowrap;
-	gap: 27px;
+	column-gap: 27px;
+	-moz-column-gap: 27px;
+	-webkit-column-gap: 27px;
 	flex-basis: 100%;
 	margin-left: 5px;
 	justify-content: center;
