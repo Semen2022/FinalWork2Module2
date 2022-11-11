@@ -561,8 +561,8 @@
   </footer>
 
 <!-- всплывающее окно, по умолчанию скрыто START -->
-<div class="popup-container">
-  <form class="popup-form-feedback visually-hidden00" action="0#" method="post" enctype="multipart/form-data">
+<div class="popup-container visually-hidden">
+  <form class="popup-form-feedback" action="0#" method="post" enctype="multipart/form-data">
     <h2 class="popup-form-feedback-title">
       ваш фидбек
     </h2>
@@ -570,10 +570,22 @@
       <p class="question-visit-site-text">
         Как часто вы заходите на сайт?
       </p>
-      <select name="answer-visit-site">
-        <option value="almost-every-day">Почти каждый день</option>
-        <option value="almost-every-manth">Почти каждый месяц</option>
-        <option value="almost-every-six-months">Примерно раз в полгода</option>
+      <select class="select-answer-visit-site"
+              name="answer-visit-site"
+              required>
+        <option class="option-answer-visit-site" 
+                value="almost-every-day" 
+                selected>
+                  Почти каждый день
+        </option>
+        <option class="option-answer-visit-site"
+                value="almost-every-manth">
+                  Почти каждый месяц
+        </option>
+        <option class="option-answer-visit-site"
+                value="almost-every-six-months">
+                  Примерно раз в полгода
+        </option>
       </select>    
     </div>
     <div class="question-subscribed-e-mail">
@@ -593,19 +605,22 @@
                 type="radio" 
                 name="answer-subscribed" 
                 value="no">
-        <span class="answer-subscribed-yes-text">Нет</span>
+        <span class="answer-subscribed-no-text">Нет</span>
       </label>
     </div>
     <div class="popup-form-feedback-question-content">
       <p class="question-content-text">
         Расскажите, какой контент вы хотели бы видеть на нашем сайте?
       </p>
-      <textarea class="answer-content-text" 
-                name="content-text"
-                placeholder="Может, больше рецептов?">
-      </textarea> 
+      
     </div>
-    <button type="submit">Отправить</button>
+    <textarea class="answer-content-text" 
+                    name="content-text" 
+                    placeholder="Может, больше рецептов?"></textarea> 
+    <button class="form-button"
+            type="submit">
+              Отправить
+      </button>
   </form>
 </div>
 <!-- всплывающее окно, по умолчанию скрыто END -->
