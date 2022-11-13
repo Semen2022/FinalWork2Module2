@@ -171,6 +171,7 @@ html, body {
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
+	line-height: 29.15px;
 	text-transform: uppercase;	
 }
 
@@ -201,7 +202,7 @@ html, body {
 	padding: 15px 25px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: #43625c;
+	background-color: #eff6f1;
 }
 
 .new-trending-post::before {
@@ -235,18 +236,22 @@ html, body {
 }
 
 .new-trending-post-tags-title {
-	box-sizing: border-box;
 	padding: 33px;
 	border: 3px solid rgba(181, 159, 91, 0.6);
 	z-index: 1;
 }
 
 .new-trending-post-tag {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: bold;
+/*	line-height: 40px; */
 	text-transform: uppercase;
 	color: #b59f5b;
 	padding-right: 16px; /* раздвижение слов в тегах блока "Тренды"*/
+}
+
+.new-trending-post-tag:hover {
+	text-decoration: underline;
 }
 
 .new-trending-post-title-link {
@@ -254,11 +259,16 @@ html, body {
 	margin-top: 10px;
 	font-size: 20px;
 	font-weight: bold;
-	color: #ffffff;
 	line-height: 24px;
+	color: #ffffff;
 	text-decoration: none;
 	text-transform: uppercase;
 }
+
+.new-trending-post-title-link:hover {
+	color: #b59f5b;
+}
+
 
 /* -- стили для блока "сейчас в тренде" END -- */
 
@@ -276,7 +286,7 @@ html, body {
 	width: 381px;
 	min-height: 294px;
 	object-fit: contain;
-  background-color: #cecece;
+   background-color: #eff6f1;
 }
 
 .post-wrapper {
@@ -457,7 +467,7 @@ html, body {
 	height: 48px;
 	border: unset;
 	background-color: #b59f5b;
-	background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+	background-image: url("../svg/search.svg");
 	background-repeat: no-repeat;
 	background-size: 18px;
 	background-position: center center;
@@ -564,11 +574,11 @@ html, body {
 
 .tag-link {	
 	text-decoration: none;
-  color: inherit;
+  	color: inherit;
 }
 
 .tag-item:hover {
-	color: #000000;
+	color: #0f0d0e;
 	border: 3px solid #b59f5b;
 }
 
@@ -605,7 +615,7 @@ html, body {
 
 .theme-link {
 	text-decoration: none;
-  color: inherit;
+  	color: inherit;
 }
 
 .theme-link:hover {
