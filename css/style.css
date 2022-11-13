@@ -814,7 +814,7 @@ html, body {
 	min-width: 250px;
 	max-width: 400px;
 	background-color: #f3f7f6;
-	row-gap: 28px;
+	row-gap: 26px;
 }
 
 .popup-form-feedback::after {
@@ -829,17 +829,18 @@ html, body {
 }
 
 .popup-form-feedback-title {
-	margin-top: 52px;
+	margin-top: 48px;
 	align-self: center;
 	font-size: 20px;
 	font-weight: bold;
+	line-height: 29.15px;
 	text-transform: uppercase;	
 }
 
 .popup-form-feedback-title::after {
 	content: "";
 	display: block;
-	margin: 12px auto 0 auto;
+	margin: 5px auto 0 auto;
 	width: 67px;
 	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
 }
@@ -855,6 +856,7 @@ html, body {
 .question-content-text {
 	font-size: 13px;
 	font-weight: 400;
+	line-height: 1.4;
 	color: #0f0d0e;
 }
 
@@ -864,16 +866,17 @@ html, body {
 	-webkit-appearance: none;
 	border: none;
 
-	margin-top: 23px;
-	padding-left: 18px;
+	margin-top: 10px;
+	padding: 13px 35px 13px 22px; 
 	width: 100%;
 
 	background-image: url("../svg/form-arrows.svg");
 	background-repeat: no-repeat;
-	background-size: 0.7em;
+	background-size: 0.75em;
 	background-position: 95% center;
-	padding-right: 35px;
-	background-color: #ffffff;
+	background-color: #f4f7f6;
+	
+	color: rgba(15, 13, 14, 0.54);
 }
 
 .option-answer-visit-site,
@@ -888,8 +891,8 @@ html, body {
 }
 
 .question-subscribed-e-mail-text {
-	margin-top: 25px;
-	margin-bottom: 9px;
+	margin-top: 9px;
+	margin-bottom: 6px;
 }
 
 .answer-subscribed-yes-text::before,
@@ -913,11 +916,11 @@ html, body {
 
 .answer-subscribed-yes-text,
 .answer-subscribed-no-text {
-	font-size: 14px;
+	font-size: 13px;
 }
 
 .answer-subscribed-yes-text {
-	margin-right: 6px;
+	margin-right: 12px;
 }
 
 .answer-subscribed-yes:checked + .answer-subscribed-yes-text::before,
@@ -927,7 +930,8 @@ html, body {
 
 .question-content-text {
 	max-width: 95%;
-	line-height: 1.3;
+	margin-top: 2px;
+	padding-left: 1px;
 }
 
 .answer-content-text {
@@ -945,6 +949,17 @@ html, body {
 	font-weight: 400;
 	color: #0f0d0e;
 	border: none;
+	outline: none;
+	background-color: #f4f7f6;
+}
+
+.answer-content-text::placeholder,
+.answer-content-text::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.answer-content-text:focus {
+	outline: 1px solid #b59f5b;
 }
 
 .form-button {
@@ -959,6 +974,10 @@ html, body {
 	outline: unset;
 	background-color: #b59f5b;
 	text-transform: uppercase;
+}
+
+.form-button:hover {
+	background-color: #323232;
 }
 
 /* стили для modal window END */
