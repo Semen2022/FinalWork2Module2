@@ -64,6 +64,7 @@ html, body {
 .wrapper {
 	box-sizing: border-box;
 	max-width: 1200px;
+	min-width: 320px;
 	padding: 0 15px 0;
 	margin: 0 auto;
 }
@@ -131,6 +132,10 @@ html, body {
 
 .menu-item:hover {
 	text-decoration: underline;
+}
+
+.menu-burger {
+	display: none;
 }
 
 .header-title {
@@ -797,7 +802,7 @@ html, body {
 }
 /* стили для footer END */
 
-/* стили для modal window START */
+/* стили для modal-window START */
 
 .popup-container {
 	position: fixed;
@@ -990,4 +995,81 @@ html, body {
 	background-color: #323232;
 }
 
-/* стили для modal window END */
+/* стили для modal-window END */
+
+	/* ---+++--- Adaptive START ---+++--- */
+
+
+/* ***** стили для Mobile devices до 640 START ***** */
+
+@media screen and (max-width: 1199.98px) {
+
+	.header {
+		min-height: 394px;
+	}
+
+	.wrapper {
+		max-width: 698px;
+		padding: 0;
+	}
+
+	.logo-image {
+		margin: 46px 0 0 0;
+		width: 158px;
+		object-fit: cover;
+	}
+	
+	.menu-list {
+		display: none;
+	}
+		
+	.menu-burger {
+		display: block;
+	}
+	
+	.menu-burger-item {
+		margin-top: 11px;
+	}
+
+	.menu-burger-item:hover {
+		width: 25px;
+	}
+
+	.header-title {
+		margin-top: 87px;
+		max-width: 618px;
+		font-size: 40px;
+		line-height: 1.38;
+
+	}
+
+	.now-trending-title {
+		margin-top: 42px;
+		margin-bottom: 19px;
+		font-size: 18px;
+		line-height: 1.61;
+	}
+
+	.now-trending-title:after {
+		margin-top: 7px;
+		width: 65px;
+		border-bottom: 2px solid rgba(181, 159, 91, 0.4);
+	}
+	
+} 
+
+
+/* ***** стили для Mobile devices до 640 END ***** */
+
+
+/* ***** стили для Tablet devices 641-1990 START ***** */
+/*
+@media screen and (min-width: 641px) and  {
+	
+
+}
+*/
+
+/* ***** стили для Tablet devices 641-1990 END ***** */
+
+	/* ---+++--- Adaptive END ---+++--- */
