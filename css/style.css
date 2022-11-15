@@ -196,6 +196,12 @@ html, body {
 	-webkit-column-gap: 7px;
 }
 
+.new-trending-post-border {
+	margin: 0px -15px -2px -11px;
+	border: 3px solid rgba(181, 159, 91, 0.6);
+	z-index: 1;
+}
+
 .new-trending-post {
 	display: flex;
 	align-items: flex-end;
@@ -241,9 +247,9 @@ html, body {
 }
 
 .new-trending-post-tags-title {
-	padding: 33px;
-	border: 3px solid rgba(181, 159, 91, 0.6);
-	z-index: 1;
+	padding: 34px 31px 28px;
+	/*border: 3px solid rgba(181, 159, 91, 0.6);
+	z-index: 1;*/
 }
 
 .new-trending-post-tag {
@@ -291,10 +297,11 @@ html, body {
 	width: 381px;
 	min-height: 294px;
 	object-fit: contain;
-   background-color: #eff6f1;
+   	background-color: #eff6f1;
 }
 
 .post-wrapper {
+	margin-top: 16px;
 	max-width: 370px;
 }
 
@@ -638,7 +645,6 @@ html, body {
 	/* --  стили для блока "our-products" START  -- */
 
 .our-products-title {
-	margin-bottom: 29px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -663,6 +669,7 @@ html, body {
 }
 
 .our-products-post {
+	margin-top: 29px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1006,10 +1013,11 @@ html, body {
 
 	.header {
 		min-height: 394px;
+		background-image: url("../images/banner-bg-tablet.jpg");
 	}
 
 	.wrapper {
-		max-width: 698px;
+		max-width: 703px;
 		padding: 0;
 	}
 
@@ -1055,9 +1063,127 @@ html, body {
 		width: 65px;
 		border-bottom: 2px solid rgba(181, 159, 91, 0.4);
 	}
+
+	.new-trending-posts {
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.new-trending-post {
+		min-height: 247px;
+	}
+
+	/*.new-trending-post-tags-title {
+		padding: 34px 27px 27px;
+	}*/
+
+	.new-trending-post-title-link {
+		font-size: 17px;
+		line-height: 22px;
+	}
+	
+	.main-block {
+		margin-top: 0;
+		margin-bottom: 0;
+		column-gap: 34px;
+		-moz-column-gap: 34px;
+		-webkit-column-gap: 34px;
+	}
+
+	.main-post-container {
+		margin-top: 53px;
+		margin-bottom: 62px;
+		flex-direction: column;
+		flex-basis: 390px;
+	}
+
+	.post-wrapper {
+		max-width: 390px;
+	}
+
+	.post-title {
+		margin-top: 2px;
+		max-width: 370px;
+	}
+
+	.post-title-link {	
+		font-size: 17px;
+		line-height: 22px;
+	}
+
+	.post-image {
+		width: 100%;
+		max-width: 393px;
+		min-height: 306px;
+	}
+
+	.post-time {
+		margin-top: 21px;
+	}
+
+	.post-text {
+		margin-top: 16px;
+	}
+
+	.main-additional-info {
+		margin-top: 41px;
+	}
+
+	.theme-item {
+		padding-bottom: 13px;
+	}
+
+	.our-products {
+		max-width: 635px;
+	}
+
+	.our-products-title {
+		font-size: 18px;
+	}
+
+	.our-products-title::after {
+		margin-top: 12px;
+	}
+
+	.our-products-posts {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 23px;
+	}
+
+	.our-products-post {
+		max-width: 283px;
+	}
+
+	.our-products-post-title {
+		margin-top: 20px;
+		font-size: 17px;
+	}
+
+	.our-products-post-text-price {
+		outline-offset: 20px;
+	}
 	
 } 
 
+@media screen and (max-width: 640.98px) and (orientation: portrait) {
+	
+	.new-trending-posts {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 640.98px) and (orientation: landscape), (min-width:641px) and (orientation: portrait) and (max-width: 1199.98px)  {
+	
+	.new-trending-posts {
+		flex-wrap: wrap;
+		gap: 3px;
+	}
+	
+	.new-trending-post {
+		flex-basis: calc(50% - 3px);
+	}
+}
 
 /* ***** стили для Mobile devices до 640 END ***** */
 
