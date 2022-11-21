@@ -59,6 +59,7 @@ html, body {
 	font-style: normal;
 	font-weight: 400;
 	color: #0f0d0e;
+	min-width: 360px;
 }
 
 .wrapper {
@@ -134,8 +135,18 @@ html, body {
 	text-decoration: underline;
 }
 
-.menu-burger {
+.container-menu-burger {
+	width: 30px;
+	height: 30px;
+}
+
+.menu-burger,
+[for=burger] {
 	display: none;
+}
+
+.menu-burger:checked + .burger-label + .header-menu {
+	display: block;
 }
 
 .header-title {
@@ -1007,7 +1018,7 @@ html, body {
 	/* ---+++--- Adaptive START ---+++--- */
 
 
-/* ***** стили для Mobile devices до 640 START ***** */
+/* ***** стили для Tablet devices 641-1990 START ***** */
 
 @media screen and (max-width: 1199.98px) {
 
@@ -1027,16 +1038,16 @@ html, body {
 		object-fit: cover;
 	}
 	
-	.menu-list {
+	.header-menu {
 		display: none;
 	}
-		
-	.menu-burger {
-		display: block;
-	}
 	
-	.menu-burger-item {
-		margin-top: 11px;
+	.burger-label {
+		display: block;
+		margin-top: 30px;
+		position: fixed;
+		right: 50px;
+
 	}
 
 	.menu-burger-item:hover {
@@ -1069,9 +1080,9 @@ html, body {
 		align-items: center;
 	}
 
-	.new-trending-post {
+	/*.new-trending-post {
 		min-height: 247px;
-	}
+	}*/
 
 	/*.new-trending-post-tags-title {
 		padding: 34px 27px 27px;
@@ -1166,6 +1177,9 @@ html, body {
 	
 } 
 
+/* ***** стили для Tablet devices 641-1990 END ***** */
+
+
 @media screen and (max-width: 640.98px) and (orientation: portrait) {
 	
 	.new-trending-posts {
@@ -1182,20 +1196,186 @@ html, body {
 	
 	.new-trending-post {
 		flex-basis: calc(50% - 3px);
+		min-height: 247px;
 	}
 }
 
-/* ***** стили для Mobile devices до 640 END ***** */
 
 
-/* ***** стили для Tablet devices 641-1990 START ***** */
-/*
-@media screen and (min-width: 641px) and  {
-	
+/* ***** стили для Mobile devices до 640 START ***** */
 
+@media screen and (max-width: 640.98px) {
+	.wrapper {
+		max-width: 330px;
+		padding-left: 15px;
+		padding-right: 15px;		
+	}
+
+	.header {
+		background-image: url("../images/banner-mobile.jpg");
+		min-height: 637px;
+	}
+
+
+	.header-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.burger-label {
+		margin-top: 29px;
+		right: 17px;
+	}
+
+	.logo-image {
+		margin-top: 223px;
+		width: 270px;
+	}
+
+	.header-title {
+		margin-top: 33px;
+		margin-left: 5px;
+		font-size: 26px;
+		line-height: 1.38;
+	}
+
+	.now-trending-title {
+		margin-top: 39px;
+		margin-bottom: 22px;
+		font-size: 16px;
+	}
+
+	.new-trending-posts {
+		gap: 3px;
+	}
+
+	.new-trending-post {
+		min-height: 232px;
+	}
+
+	.new-trending-post-tags-title {
+		padding: 34px 20px 32px;
+	}
+
+	.new-trending-post-title-link {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
+	.main-block {
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.main-post-container {
+		margin-top: 40px;
+		margin-bottom: 56px;
+	}
+
+	.post-image {
+		min-height: 254px;
+	}
+
+	.post-wrapper {
+		margin-top: 14px;
+	}
+
+	.post-title {
+		margin-top: 8px;
+	}
+
+	.post-title-link {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
+	.post-time {
+		margin-top: 6px;
+	}
+
+	.post-text {
+		margin-top: 2px;
+		font-size: 14px;
+		line-height: 1.428;
+	}
+
+	.additional-info-search {
+		margin-bottom: 39px;
+	}
+
+	.form-search {
+		max-width: 283px;
+	}
+
+	.additional-info-mailing-title {
+		font-size: 16px;
+	}
+
+	.additional-info-mailing {
+		margin-bottom: 34px;
+	}
+
+	.additional-info-tags-title {
+		font-size: 16px;
+	}
+
+	.additional-info-tags {
+		margin-bottom: 43px;
+	}
+
+	.additional-info-tags-container {
+		justify-content: space-between;
+		column-gap: 0;
+	}
+
+	.additional-info-themes-title {
+		margin-left: -5px;
+		font-size: 16px;
+	}
+
+	.our-products {
+		margin-top: 46px;
+	}
+
+	.our-products-title {
+		font-size: 16px;
+	}
+
+	.our-products-post {
+		max-width: 294px;
+	}
+
+	.our-products-post-text-price {
+		outline-offset: 15px;
+	}
+
+	.our-products-post-title,
+	.our-products-post-text,
+	.our-products-post-price-link {
+		padding-left: 4px;
+	}
+
+	.our-products-post-link-to-shop {
+		padding-left: 27px;
+		padding-right: 32px;
+	}
+
+	.footer {
+		margin-top: 100px;
+	}
+
+	.social-links-list {
+		height: 23px;
+	}
+
+	.copyright {
+		margin-top: 74px;
+	}
 }
-*/
 
-/* ***** стили для Tablet devices 641-1990 END ***** */
+
+/* ***** стили для Mobile devices до 640 END ***** */
 
 	/* ---+++--- Adaptive END ---+++--- */
