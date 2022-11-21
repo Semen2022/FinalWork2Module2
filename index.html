@@ -422,6 +422,10 @@
               <span class="theme-link-count">8</span>                        
             </li>
           </ul>
+          <div class="popup-button">
+            <input class="popup-message-input" type="checkbox" name="popup-name" id="popup_message_close">
+            <span class="popup-button-text">Обратная связь</span>
+          </div>
         </section>
         <!-- секция темы окончание -->
       </aside>
@@ -573,71 +577,76 @@
   </footer>
 
 <!-- всплывающее окно, по умолчанию скрыто START -->
-<div class="popup-container visually-hidden"> 
-  <form class="popup-form-feedback" action="0#" method="post" enctype="multipart/form-data">
-    <h2 class="popup-form-feedback-title">
-      ваш фидбек
-    </h2>
-    <div class="popup-form-feedback-question-visit-site">
-      <p class="question-visit-site-text">
-        Как часто вы заходите на сайт?
-      </p>
-      <select class="select-answer-visit-site"
-              name="answer-visit-site"
-              required>
-        <option class="option-answer-visit-site" 
-                value="almost-every-day" 
-                selected>
-                  Почти каждый день
-        </option>
-        <option class="option-answer-visit-site"
-                value="almost-every-manth">
-                  Раз в несколько дней
-        </option>
-        <option class="option-answer-visit-site"
-                value="almost-every-six-months">
-                Раз в несколько недель
-        </option>
-        <option class="option-answer-visit-site"
-                value="almost-every-six-months">
-                Несколько раз в год
-        </option>
-      </select>    
-    </div>
-    <div class="question-subscribed-e-mail">
-      <p class="question-subscribed-e-mail-text">
-        Вы подписаны на e-mail рассылку?
-      </p>
-      <label class="label-answer-subscribed-yes">
-        <input class="answer-subscribed-yes" 
-                type="radio" 
-                name="answer-subscribed" 
-                value="yes"
-                checked required>
-        <span class="answer-subscribed-yes-text">Да</span>
-      </label>
-      <label class="label-answer-subscribed-no">
-        <input class="answer-subscribed-no" 
-                type="radio" 
-                name="answer-subscribed" 
-                value="no">
-        <span class="answer-subscribed-no-text">Нет</span>
-      </label>
-    </div>
-    <div class="popup-form-feedback-question-content">
-      <p class="question-content-text">
-        Расскажите, какой контент вы хотели бы видеть на нашем сайте?
-      </p>
-      
-    </div>
-    <textarea class="answer-content-text" 
-                    name="content-text" 
-                    placeholder="Может, больше рецептов?"></textarea> 
-    <button class="form-button"
-            type="submit">
-              Отправить
-      </button>
-  </form>
+
+<div class="popup_message">
+
+<label for="popup_message_close"></label>
+  <div class="popup-container visually-hidden"> 
+    <form class="popup-form-feedback" action="0#" method="post" enctype="multipart/form-data">
+      <h2 class="popup-form-feedback-title">
+        ваш фидбек
+      </h2>
+      <div class="popup-form-feedback-question-visit-site">
+        <p class="question-visit-site-text">
+          Как часто вы заходите на сайт?
+        </p>
+        <select class="select-answer-visit-site"
+                name="answer-visit-site"
+                required>
+          <option class="option-answer-visit-site" 
+                  value="almost-every-day" 
+                  selected>
+                    Почти каждый день
+          </option>
+          <option class="option-answer-visit-site"
+                  value="almost-every-manth">
+                    Раз в несколько дней
+          </option>
+          <option class="option-answer-visit-site"
+                  value="almost-every-six-months">
+                  Раз в несколько недель
+          </option>
+          <option class="option-answer-visit-site"
+                  value="almost-every-six-months">
+                  Несколько раз в год
+          </option>
+        </select>    
+      </div>
+      <div class="question-subscribed-e-mail">
+        <p class="question-subscribed-e-mail-text">
+          Вы подписаны на e-mail рассылку?
+        </p>
+        <label class="label-answer-subscribed-yes">
+          <input class="answer-subscribed-yes" 
+                  type="radio" 
+                  name="answer-subscribed" 
+                  value="yes"
+                  checked required>
+          <span class="answer-subscribed-yes-text">Да</span>
+        </label>
+        <label class="label-answer-subscribed-no">
+          <input class="answer-subscribed-no" 
+                  type="radio" 
+                  name="answer-subscribed" 
+                  value="no">
+          <span class="answer-subscribed-no-text">Нет</span>
+        </label>
+      </div>
+      <div class="popup-form-feedback-question-content">
+        <p class="question-content-text">
+          Расскажите, какой контент вы хотели бы видеть на нашем сайте?
+        </p>
+        
+      </div>
+      <textarea class="answer-content-text" 
+                      name="content-text" 
+                      placeholder="Может, больше рецептов?"></textarea> 
+      <button class="form-button"
+              type="submit">
+                Отправить
+        </button>
+    </form>
+  </div>
 </div>
 <!-- всплывающее окно, по умолчанию скрыто END -->
 

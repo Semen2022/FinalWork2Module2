@@ -822,6 +822,11 @@ html, body {
 
 /* стили для modal-window START */
 
+.popup-message-input:checked + .popup-button-text {
+	display: flex;
+}
+
+
 .popup-container {
 	position: fixed;
 	left: 0;
