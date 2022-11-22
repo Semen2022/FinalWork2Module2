@@ -115,8 +115,6 @@ html, body {
 .menu-list {
 	display: flex;
 	column-gap: 35px;
-	-moz-column-gap: 35px;
-	-webkit-column-gap: 35px;
 }
 
 .menu-item {
@@ -822,12 +820,9 @@ html, body {
 
 /* стили для modal-window START */
 
-.popup-message-input:checked + .popup-button-text {
-	display: flex;
-}
-
 
 .popup-container {
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -1017,6 +1012,32 @@ html, body {
 .form-button:hover {
 	background-color: #323232;
 }
+
+.popup-message-input {
+	display: none;
+}
+
+.popup-button-text {
+	display: block;
+	margin: 0 auto 50px;
+	padding: 10px;
+	width: 150px;
+	min-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	color: #ffffff;
+	border: unset;
+	outline: unset;
+	background-color: #b59f5b;
+	text-transform: uppercase;
+}
+
+.popup-message-input:checked + .popup-container {
+	display: block;
+}
+
+
 
 /* стили для modal-window END */
 
@@ -1236,6 +1257,11 @@ html, body {
 	.logo-image {
 		margin-top: 223px;
 		width: 270px;
+	}
+
+	.menu-list {
+		column-gap: 10px;
+		font-size: 12px;
 	}
 
 	.header-title {

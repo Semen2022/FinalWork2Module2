@@ -422,10 +422,6 @@
               <span class="theme-link-count">8</span>                        
             </li>
           </ul>
-          <div class="popup-button">
-            <input class="popup-message-input" type="checkbox" name="popup-name" id="popup_message_close">
-            <span class="popup-button-text">Обратная связь</span>
-          </div>
         </section>
         <!-- секция темы окончание -->
       </aside>
@@ -577,12 +573,14 @@
   </footer>
 
 <!-- всплывающее окно, по умолчанию скрыто START -->
-
-<div class="popup_message">
-
-<label for="popup_message_close"></label>
-  <div class="popup-container visually-hidden"> 
+  <label for="popup_message" >
+    <span class="popup-button-text">Обратная связь</span>
+  </label>
+    <input class="popup-message-input" type="checkbox" name="popup-name" id="popup_message">
+  <div class="popup-container">
+    <label for="popup_message">&times;</label>
     <form class="popup-form-feedback" action="0#" method="post" enctype="multipart/form-data">
+      
       <h2 class="popup-form-feedback-title">
         ваш фидбек
       </h2>
@@ -647,7 +645,7 @@
         </button>
     </form>
   </div>
-</div>
+
 <!-- всплывающее окно, по умолчанию скрыто END -->
 
 </body>
