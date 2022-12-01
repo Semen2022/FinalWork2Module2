@@ -1037,7 +1037,17 @@ html, body {
 	display: block;
 }
 
-
+.popup-message-close {
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	top: -27px;
+	right: -4px;
+	opacity: 0; /* делаю "крестик" прозрачным */ 
+	font-size: 36px;
+	background-image: url(../svg/form-x.svg);
+	z-index: 1;
+}
 
 /* стили для modal-window END */
 
