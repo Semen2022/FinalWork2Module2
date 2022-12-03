@@ -168,8 +168,6 @@ html, body {
 	display: flex;
 	justify-content: flex-start;
 	column-gap: 118px;
-	-moz-column-gap: 118px;
-	-webkit-column-gap: 118px;
 }
 
 /* -- стили для блока "сейчас в тренде" START -- */
@@ -180,7 +178,7 @@ html, body {
 }
 
 .now-trending-title {
-	margin-top: 61px;
+	margin-top: 56px;
 	margin-bottom: 28px;
 	text-align: center;
 	font-size: 20px;
@@ -192,7 +190,7 @@ html, body {
 .now-trending-title:after {
 	content: "";
 	display: block;
-	margin: 11px auto 0 auto;
+	margin: 7px auto 0 auto;
 	width: 67px;
 	border-bottom: 3px solid rgba(181, 159, 91, 0.4);
 }
@@ -206,7 +204,7 @@ html, body {
 }
 
 .new-trending-post-border {
-	margin: 0px -15px -2px -11px;
+	margin: 0px -5px -2px -5px;
 	border: 3px solid rgba(181, 159, 91, 0.6);
 	z-index: 1;
 }
@@ -256,7 +254,7 @@ html, body {
 }
 
 .new-trending-post-tags-title {
-	padding: 34px 31px 28px;
+	padding: 35px 33px;
 	/*border: 3px solid rgba(181, 159, 91, 0.6);
 	z-index: 1;*/
 }
@@ -310,12 +308,11 @@ html, body {
 }
 
 .post-wrapper {
-	margin-top: 16px;
 	max-width: 370px;
 }
 
 .post-tags {
-	margin-right: 15px;
+	margin-right: 16px;
 	vertical-align: top;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -581,7 +578,7 @@ html, body {
 	column-gap: 8px;
 	-moz-column-gap: 8px;
 	-webkit-column-gap: 8px;
-	row-gap: 5px;	
+	row-gap: 4px;	
 }
 
 .tag-item {
@@ -623,7 +620,7 @@ html, body {
 .additional-info-themes-container {
 	display: flex;
 	flex-direction: column;
-	row-gap: 15px;	
+	row-gap: 17px;	
 }
 
 .theme-item {
@@ -673,11 +670,10 @@ html, body {
 	display: flex;
 	justify-content: space-around;
 	column-gap: 63px;
-	-moz-column-gap: 63px;
-	-webkit-column-gap: 63px;
 }
 
 .our-products-post {
+	
 	margin-top: 29px;
 	display: flex;
 	flex-direction: column;
@@ -686,7 +682,7 @@ html, body {
 }
 
 .our-products-post-title {
-	margin-top: 22px;
+	margin-top: 30px;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-weight: bold;
@@ -715,11 +711,24 @@ html, body {
 }
 
 .our-products-post-text-price {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex-basis: 100%;
+	width: 100%;
+	min-height: 100%;
+	
+}
+
+.our-products-post-border {
+	position: absolute;
+	box-sizing: border-box;
+	top: -8px;
+	left: 0;
+	width: 100%;
+	height: 105%;
+/*	margin: 1px 13px 9px 12px;*/
 	outline: 3px solid #b59f5b;
-	outline-offset: 32px;
+	outline-offset: 22px;
 }
 
 .our-products-post-price-link {
@@ -763,7 +772,7 @@ html, body {
 .our-products-post-link-to-shop {
 	display: block;
 	text-align: center;
-	padding: 18px 26px;
+	padding: 18px 28px;
 	background-color: #b59f5b;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -782,7 +791,7 @@ html, body {
 /* стили для footer START */
 
 .footer {
-	margin-top: 94px;
+	margin-top: 300px;
 	margin-bottom: 48px;
 }
 
@@ -1054,6 +1063,29 @@ html, body {
 	/* ---+++--- Adaptive START ---+++--- */
 
 
+	@media screen and (max-width: 640.98px) and (orientation: portrait) { /* до 640px и портретной оиентации - 1 (одна) колонка */
+	
+		.new-trending-posts {
+			flex-direction: column;
+		}
+	}
+	
+	@media screen and (max-width: 640.98px) and (orientation: landscape), (min-width: 641px) and (max-width: 1199.98px) and (orientation: portrait) {
+		
+		.new-trending-posts {
+			flex-wrap: wrap;
+			gap: 3px;
+			justify-content: space-between;
+		}
+		
+		.new-trending-post {
+			flex-basis: calc(50% - 3px);
+			min-height: 246px;
+		}
+	}
+	
+
+
 /* ***** стили для Tablet devices 641-1990 START ***** */
 
 @media screen and (max-width: 1199.98px) {
@@ -1069,7 +1101,7 @@ html, body {
 	}
 
 	.logo-image {
-		margin: 46px 0 0 0;
+		margin: 45px 0 0 3px;
 		width: 158px;
 		object-fit: cover;
 	}
@@ -1079,11 +1111,10 @@ html, body {
 	}
 	
 	.burger-label {
+		position: absolute;
+		right: 34px;
+		margin-top: 54px;
 		display: block;
-		margin-top: 30px;
-		position: fixed;
-		right: 50px;
-
 	}
 
 	.menu-burger-item:hover {
@@ -1111,7 +1142,7 @@ html, body {
 		border-bottom: 2px solid rgba(181, 159, 91, 0.4);
 	}
 
-	.new-trending-posts {
+/*	.new-trending-posts {
 		justify-content: space-evenly;
 		align-items: center;
 	}
@@ -1120,60 +1151,88 @@ html, body {
 		min-height: 247px;
 	}*/
 
-	/*.new-trending-post-tags-title {
-		padding: 34px 27px 27px;
-	}*/
+	.new-trending-post-tags-title {
+		padding: 31px 30px 28px;
+	}
+
+	.new-trending-post-tag {
+		padding-right: 13px;
+	}
+
+	.new-trending-post-border {
+		margin: -3px -8px 0 -4px;
+	}
 
 	.new-trending-post-title-link {
+		margin-top: 8px;
 		font-size: 17px;
-		line-height: 22px;
+		line-height: 23px;
 	}
 	
 	.main-block {
 		margin-top: 0;
-		margin-bottom: 0;
-		column-gap: 34px;
-		-moz-column-gap: 34px;
-		-webkit-column-gap: 34px;
+		margin-bottom: 4px;
+		column-gap: 28px;
+		max-width: 698px;
 	}
 
 	.main-post-container {
-		margin-top: 53px;
+		margin-top: 50px;
 		margin-bottom: 62px;
 		flex-direction: column;
 		flex-basis: 390px;
 	}
 
+	.pillow-prints .post-image {
+		margin-top: -5px; /*подгонка последнего поста с подушкой */
+	}
+
 	.post-wrapper {
-		max-width: 390px;
+		max-width: 410px;
+	}
+	
+	.post-image {
+		width: 100%;
+		max-width: 393px;
+		min-height: 298px;
+	}
+
+	.post-tags {
+		margin-right: 13px;
 	}
 
 	.post-title {
-		margin-top: 2px;
-		max-width: 370px;
+		margin-top: 10px;
+		max-width: 400px;
 	}
-
 	.post-title-link {	
 		font-size: 17px;
 		line-height: 22px;
 	}
 
-	.post-image {
-		width: 100%;
-		max-width: 393px;
-		min-height: 306px;
-	}
-
 	.post-time {
-		margin-top: 21px;
+		margin-top: 19px;
 	}
 
 	.post-text {
 		margin-top: 16px;
+		max-width: 393px;
 	}
 
 	.main-additional-info {
 		margin-top: 41px;
+	}
+
+	.main-additional-info-new-posts {
+		margin-bottom: 61px;
+	}
+
+	.additional-info-search {
+		margin-bottom: 52px;
+	}
+
+	.field-search {
+		padding-left: 18px;
 	}
 
 	.theme-item {
@@ -1181,7 +1240,7 @@ html, body {
 	}
 
 	.our-products {
-		max-width: 635px;
+		max-width: 655px;
 	}
 
 	.our-products-title {
@@ -1199,7 +1258,7 @@ html, body {
 	}
 
 	.our-products-post {
-		max-width: 283px;
+		max-width: 294px;
 	}
 
 	.our-products-post-title {
@@ -1208,34 +1267,12 @@ html, body {
 	}
 	
 	.our-products-post-text-price {
-		outline-offset: 20px;
+		margin: -3px -9px -5px;
 	}
 	
 } 
 
 /* ***** стили для Tablet devices 641-1990 END ***** */
-
-
-@media screen and (max-width: 640.98px) and (orientation: portrait) {
-	
-	.new-trending-posts {
-		flex-direction: column;
-	}
-}
-
-@media screen and (max-width: 640.98px) and (orientation: landscape), (min-width:641px) and (orientation: portrait) and (max-width: 1199.98px)  {
-	
-	.new-trending-posts {
-		flex-wrap: wrap;
-		gap: 3px;
-	}
-	
-	.new-trending-post {
-		flex-basis: calc(50% - 3px);
-		min-height: 247px;
-	}
-}
-
 
 
 /* ***** стили для Mobile devices до 640 START ***** */
@@ -1416,7 +1453,7 @@ html, body {
 	}
 }
 
-
 /* ***** стили для Mobile devices до 640 END ***** */
+
 
 	/* ---+++--- Adaptive END ---+++--- */
