@@ -576,8 +576,6 @@ html, body {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: 8px;
-	-moz-column-gap: 8px;
-	-webkit-column-gap: 8px;
 	row-gap: 4px;	
 }
 
@@ -1126,7 +1124,6 @@ html, body {
 		max-width: 618px;
 		font-size: 40px;
 		line-height: 1.38;
-
 	}
 
 	.now-trending-title {
@@ -1188,6 +1185,7 @@ html, body {
 	}
 
 	.post-wrapper {
+		margin-top: 14px;
 		max-width: 410px;
 	}
 	
@@ -1239,6 +1237,10 @@ html, body {
 		padding-bottom: 13px;
 	}
 
+	.additional-info-themes-container {
+		row-gap: 15px;
+	}
+
 	.our-products {
 		max-width: 655px;
 	}
@@ -1259,17 +1261,71 @@ html, body {
 
 	.our-products-post {
 		max-width: 294px;
+		margin-bottom: 212px;
+	}
+
+	.our-products-post-border {
+		height: 97%;
 	}
 
 	.our-products-post-title {
-		margin-top: 20px;
+		margin-top: 30px;
 		font-size: 17px;
 	}
 	
 	.our-products-post-text-price {
 		margin: -3px -9px -5px;
 	}
+
+	.footer {
+		margin-top: 53px;
+	}
+
+	.popup-form-feedback {
+		top: 23%;
+		min-width: 385px;
+		row-gap: 26px;
+		padding-bottom: 32px;
+	}
 	
+	.popup-form-feedback::after {
+		width: 28px;
+		height: 28px;
+		top: -36px;
+		right: -2px;
+	}
+
+	.popup-form-feedback-title {
+		font-size: 18px;
+	}
+
+	.question-subscribed-e-mail-text {
+		margin-top: 8px;
+		margin-bottom: 9px;
+	}
+
+	.answer-subscribed-yes-text {
+		margin-right: 31px;
+		margin-left: 2px;
+	}
+
+	.answer-subscribed-yes-text,
+	.answer-subscribed-no-text {
+		font-size: 14px;
+	}
+
+	.answer-subscribed-yes-text::before, 
+	.answer-subscribed-no-text::before {
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+		background-size: 24px;
+	}
+
+	.question-content-text {
+		margin-top: 1px;
+	}
+
 } 
 
 /* ***** стили для Tablet devices 641-1990 END ***** */
@@ -1450,6 +1506,25 @@ html, body {
 
 	.copyright {
 		margin-top: 74px;
+	}
+
+	.popup-form-feedback {
+		top: 23%;
+		min-width: 92%;
+		row-gap: 26px;
+		padding-left: 24px;
+	}
+	
+	.popup-form-feedback::after {
+		width: 28px;
+		height: 28px;
+		top: -33px;
+		right: 1px;
+	}
+
+	.popup-form-feedback-title {
+		margin-top: 22px;		
+		font-size: 16px;
 	}
 }
 
