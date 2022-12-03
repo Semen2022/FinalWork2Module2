@@ -1093,13 +1093,22 @@ html, body {
 		background-image: url("../images/banner-bg-tablet.jpg");
 	}
 
+	.menu-list {
+		position: absolute;
+		top: 54px;
+		right: 46px;
+		flex-direction: column;
+		row-gap: 16px;
+		font-size: 14px;
+	}
+
 	.wrapper {
 		max-width: 703px;
 		padding: 0;
 	}
 
 	.logo-image {
-		margin: 45px 0 0 3px;
+		margin: 45px 0 0 15px;
 		width: 158px;
 		object-fit: cover;
 	}
@@ -1348,12 +1357,12 @@ html, body {
 
 	.header-container {
 		display: flex;
-		flex-direction: column;
+		/*flex-direction: column;*/
 		align-items: center;
 	}
 
 	.burger-label {
-		margin-top: 29px;
+		top: -25px;
 		right: 17px;
 	}
 
@@ -1435,6 +1444,10 @@ html, body {
 		line-height: 1.428;
 	}
 
+	.pillow-prints .post-image {
+		margin-top: 1px;
+	}
+
 	.additional-info-search {
 		margin-bottom: 39px;
 	}
@@ -1444,6 +1457,7 @@ html, body {
 	}
 
 	.additional-info-mailing-title {
+		margin-top: -4px;
 		font-size: 16px;
 	}
 
@@ -1478,17 +1492,24 @@ html, body {
 	}
 
 	.our-products-post {
+		top: -5px;
+		margin-bottom: 184px;
 		max-width: 294px;
 	}
 
 	.our-products-post-text-price {
-		outline-offset: 15px;
+		margin-top: 1px;
+	}
+
+	.our-products-post-border {
+		left: 5px;
+		height: 70%;
 	}
 
 	.our-products-post-title,
 	.our-products-post-text,
 	.our-products-post-price-link {
-		padding-left: 4px;
+		padding-left: 0px;
 	}
 
 	.our-products-post-link-to-shop {
