@@ -174,7 +174,6 @@ html, body {
 
 .main-now-trending {
 	min-height: 308px;
-	
 }
 
 .now-trending-title {
@@ -198,9 +197,7 @@ html, body {
 .new-trending-posts {
 	display: flex;
 	height: 100%;
-	column-gap: 7px;
-	-moz-column-gap: 7px;
-	-webkit-column-gap: 7px;
+	gap: 7px;
 }
 
 .new-trending-post-border {
@@ -1108,7 +1105,7 @@ html, body {
 	}
 
 	.logo-image {
-		margin: 45px 0 0 15px;
+		margin: 45px 0 0 4px;
 		width: 158px;
 		object-fit: cover;
 	}
@@ -1148,14 +1145,19 @@ html, body {
 		border-bottom: 2px solid rgba(181, 159, 91, 0.4);
 	}
 
+	.new-trending-posts {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 /*	.new-trending-posts {
 		justify-content: space-evenly;
 		align-items: center;
-	}
-
-	/*.new-trending-post {
-		min-height: 247px;
 	}*/
+
+	.new-trending-post {
+		flex-basis: calc(50% - 7px);
+		min-height: 247px;
+	}
 
 	.new-trending-post-tags-title {
 		padding: 31px 30px 28px;
